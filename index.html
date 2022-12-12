@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Content Wrapper  -->
+    <div class="container">
+        <!-- Form for Calculator  -->
+        <form name="calc" class="calculator">
+            <!-- Input for result display  -->
+            <input type="text" class="value" readonly name="txt">
+            <!-- Clear input button  -->
+            <span class="num clear" onclick="calc.txt.value=''"><i>C</i></span>
+            <!-- Operational / Number keys  -->
+            <span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
+            <span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
+            <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+            <span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+            <span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+            <span class="num" onclick="calc.txt.value+='-'"><i>-</i></span>
+            <span class="num" onclick="calc.txt.value+='4'"><i>4</i></span>
+            <span class="num" onclick="calc.txt.value+='5'"><i>5</i></span>
+            <span class="num" onclick="calc.txt.value+='6'"><i>6</i></span>
+            <span class="num plus" onclick="calc.txt.value+='+'"><i>+</i></span>
+            <span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+            <span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+            <span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+            <span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+            <span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+            <span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+
+            <!-- Onclick: the equality button calculates the result with the aid of js  -->
+            <span class="num equals" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
+        </form>
+    </div>
+
+    <!---====****** A SIMPLE RUN DOWN ******=========-->
+    <!--
+        The form has a name attribute, same with the input.
+        formName = calc, inputName = txt 
+
+        The value of the input is accessed or inserted through - 
+        calc.txt.value / calc.txt.value = ;
+        Hence, using += operator, the value can be augumented or updated by clicking any operational or number keys
+
+        The clear button on click return an empty value, hence clearing the input value
+
+        The evaluation is done through the use of javascript eval() function.
+    -->
+</body>
+
+</html>
